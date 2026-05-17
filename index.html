@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darkdragon14 — Home Assistant & Self-hosting tools</title>
+  <meta name="description" content="Portfolio of Darkdragon14 — open-source tools for Home Assistant, Docker, Cloudflare Tunnels, and self-hosted infrastructures.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/19928423?v=4" type="image/png">
+  <link rel="apple-touch-icon" href="https://avatars.githubusercontent.com/u/19928423?v=4">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const theme = savedTheme || systemTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Darkdragon14 home">
+      <img class="brand-avatar" src="https://avatars.githubusercontent.com/u/19928423?v=4" alt="Darkdragon14 GitHub avatar">
+      <span>Darkdragon14</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#focus">Focus</a>
+      <a href="#thinking">Thinking</a>
+      <a class="nav-button" href="https://github.com/Darkdragon14">GitHub</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Home Assistant · Docker · Self-hosting</p>
+        <h1>Building tools that make smart homes and homelabs less annoying to maintain.</h1>
+        <p class="hero-text">
+          I build open-source tools for Home Assistant, Docker, Cloudflare Tunnels,
+          and self-hosted infrastructures. If something can be automated instead of
+          managed by hand, I’ll probably try to automate it.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="https://github.com/Darkdragon14">GitHub profile</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Quick profile">
+        <div class="terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <pre><code>$ whoami
+Darkdragon14
+
+$ focus
+Home Assistant integrations
+Docker tooling
+Cloudflare Tunnel automation
+Self-hosted infrastructure
+
+$ motto
+Automation > manual steps</code></pre>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured work</p>
+        <h2>Stuff I build</h2>
+        <p>Projects focused on making real-world self-hosting, smart home, and Docker workflows easier to use.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-icon">📦</div>
+          <div>
+            <div class="project-topline">
+              <h3>VolumeVault</h3>
+              <span class="badge">New</span>
+            </div>
+            <div class="project-meta" aria-label="VolumeVault GitHub metadata">
+              <img src="https://img.shields.io/github/stars/Darkdragon14/VolumeVault?style=flat&label=stars" alt="VolumeVault GitHub stars">
+              <img src="https://img.shields.io/github/v/release/Darkdragon14/VolumeVault?style=flat&label=release" alt="VolumeVault latest release">
+            </div>
+            <p>
+              A friendly backup manager for Docker volumes. Create, schedule, pause,
+              monitor, and restore Docker volume backups without writing cron jobs or
+              remembering backup commands.
+            </p>
+            <ul>
+              <li>Docker volume backups made visible</li>
+              <li>Multiple storage backends, from local targets to remote object storage</li>
+              <li>Guided scheduling instead of raw cron</li>
+              <li>Pause backups when a volume disappears</li>
+              <li>Restore support for when backups actually matter</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/Darkdragon14/VolumeVault">GitHub →</a>
+              <a href="https://darkdragon14.github.io/VolumeVault/">Docs →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">☁️</div>
+          <h3>docker-cloudflare-tunnel-sync</h3>
+          <div class="project-meta" aria-label="docker-cloudflare-tunnel-sync GitHub metadata">
+            <img src="https://img.shields.io/github/stars/Darkdragon14/docker-cloudflare-tunnel-sync?style=flat&label=stars" alt="docker-cloudflare-tunnel-sync GitHub stars">
+            <img src="https://img.shields.io/github/v/release/Darkdragon14/docker-cloudflare-tunnel-sync?style=flat&label=release" alt="docker-cloudflare-tunnel-sync latest release">
+          </div>
+          <p>Turn Docker labels into Cloudflare Tunnel routes, DNS records, and Access rules.</p>
+          <p class="mini">Containers become the source of truth — no more dashboard clicking.</p>
+          <div class="links"><a href="https://github.com/Darkdragon14/docker-cloudflare-tunnel-sync">GitHub →</a></div>
+        </article>
+
+        <article class="project-card aqara-card">
+          <div class="project-icon">💡</div>
+          <h3>ha-aqara-devices</h3>
+          <div class="project-meta" aria-label="ha-aqara-devices GitHub metadata">
+            <img src="https://img.shields.io/github/stars/Darkdragon14/ha-aqara-devices?style=flat&label=stars" alt="ha-aqara-devices GitHub stars">
+            <img src="https://img.shields.io/github/v/release/Darkdragon14/ha-aqara-devices?style=flat&label=release" alt="ha-aqara-devices latest release">
+          </div>
+          <p>Advanced Aqara Cloud integration for Home Assistant, powered by a RocketMQ bridge for near real-time device events.</p>
+          <p class="mini">Install the integration with HACS, then run the bridge as Docker service or Home Assistant OS add-on.</p>
+          <div class="links">
+            <a href="https://darkdragon14.github.io/aqara-rocketmq-bridge/">Docs →</a>
+            <a href="https://github.com/Darkdragon14/ha-aqara-devices">Integration →</a>
+            <a href="https://github.com/Darkdragon14/aqara-rocketmq-bridge">Bridge →</a>
+            <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Darkdragon14&repository=ha-aqara-devices">HACS →</a>
+            <a href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FDarkdragon14%2Faqara-rocketmq-bridge">Add-on →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">🔐</div>
+          <h3>ha-access-control-manager</h3>
+          <div class="project-meta" aria-label="ha-access-control-manager GitHub metadata">
+            <img src="https://img.shields.io/github/stars/Darkdragon14/ha-access-control-manager?style=flat&label=stars" alt="ha-access-control-manager GitHub stars">
+            <img src="https://img.shields.io/github/v/release/Darkdragon14/ha-access-control-manager?style=flat&label=release" alt="ha-access-control-manager latest release">
+          </div>
+          <p>Centralized role and permission management for Home Assistant dashboards, entities, helpers, and devices.</p>
+          <p class="mini">Clean dashboards, proper access levels, fewer “who broke this?” moments.</p>
+          <div class="links">
+            <a href="https://github.com/Darkdragon14/ha-access-control-manager">GitHub →</a>
+            <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Darkdragon14&repository=ha-access-control-manager">HACS →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">🏠</div>
+          <h3>ha-guest-mode</h3>
+          <div class="project-meta" aria-label="ha-guest-mode GitHub metadata">
+            <img src="https://img.shields.io/github/stars/Darkdragon14/ha-guest-mode?style=flat&label=stars" alt="ha-guest-mode GitHub stars">
+            <img src="https://img.shields.io/github/v/release/Darkdragon14/ha-guest-mode?style=flat&label=release" alt="ha-guest-mode latest release">
+          </div>
+          <p>Generate secure, time-limited guest links for Home Assistant.</p>
+          <p class="mini">Guests get access, you keep control, no zombie accounts.</p>
+          <div class="links">
+            <a href="https://github.com/Darkdragon14/ha-guest-mode">GitHub →</a>
+            <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Darkdragon14&repository=ha-guest-mode">HACS →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">🎛️</div>
+          <h3>streamdeck-docker</h3>
+          <div class="project-meta" aria-label="streamdeck-docker GitHub metadata">
+            <img src="https://img.shields.io/github/stars/Darkdragon14/streamdeck-docker?style=flat&label=stars" alt="streamdeck-docker GitHub stars">
+            <img src="https://img.shields.io/github/v/release/Darkdragon14/streamdeck-docker?style=flat&label=release" alt="streamdeck-docker latest release">
+          </div>
+          <p>Control Docker and Compose stacks from an Elgato Stream Deck.</p>
+          <p class="mini">One button, one container. Surprisingly addictive.</p>
+          <div class="links">
+            <a href="https://github.com/Darkdragon14/streamdeck-docker">GitHub →</a>
+            <a href="https://marketplace.elgato.com/product/elgato-docker-b4403038-98e1-4f4b-a336-cdb0cb84019a">Marketplace →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="focus" class="section split">
+      <div>
+        <p class="eyebrow">Main playgrounds</p>
+        <h2>Where I spend most of my time</h2>
+        <p>
+          Most of my work lives at the intersection of smart home automation,
+          self-hosting, infrastructure tooling, and developer experience.
+        </p>
+      </div>
+
+      <div class="tag-cloud">
+        <span>Home Assistant</span>
+        <span>HACS integrations</span>
+        <span>Docker</span>
+        <span>CI/CD</span>
+        <span>Cloudflare Zero Trust</span>
+        <span>Cloudflare Tunnels</span>
+        <span>Homelab</span>
+        <span>Smart home access control</span>
+        <span>Self-hosting UX</span>
+      </div>
+    </section>
+
+    <section id="thinking" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">How I think</p>
+        <h2>Small tools, real problems</h2>
+      </div>
+
+      <div class="principles">
+        <article>
+          <h3>Automation first</h3>
+          <p>Automation beats documentation, and documentation beats manual steps.</p>
+        </article>
+        <article>
+          <h3>Less fragile by default</h3>
+          <p>If it breaks easily, it is probably not finished yet.</p>
+        </article>
+        <article>
+          <h3>Security with usability</h3>
+          <p>Security should protect the workflow without making it painful to use.</p>
+        </article>
+        <article>
+          <h3>Nerd tools, less annoying</h3>
+          <p>The best tools make complex things feel calm, obvious, and reversible.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <p class="eyebrow">Want to contribute?</p>
+      <h2>Issues, ideas, and PRs are welcome.</h2>
+      <p>
+        If you’re using one of my projects and something feels wrong, let me know —
+        chances are I’ll want to fix it.
+      </p>
+      <a class="button primary" href="https://github.com/Darkdragon14">Open GitHub profile</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© Darkdragon14</span>
+    <span>Built for GitHub Pages</span>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('.theme-toggle-icon');
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.style.colorScheme = theme;
+      localStorage.setItem('theme', theme);
+      themeIcon.textContent = theme === 'light' ? '☀️' : '🌙';
+      themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+      themeToggle.setAttribute('title', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    }
+
+    setTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

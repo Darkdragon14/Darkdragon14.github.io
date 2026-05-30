@@ -1,0 +1,42 @@
+.project-meta {
+  align-items: center;
+}
+
+.project-badge-link {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.project-badge-link img {
+  display: block;
+  height: 20px;
+  max-width: 100%;
+}
+
+@media (min-width: 861px) {
+  .project-card.featured .project-badge-link img {
+    height: 24px;
+  }
+}
+
+.project-badge-dark {
+  display: none !important;
+}
+
+:root[data-theme="dark"] .project-badge-light {
+  display: none !important;
+}
+
+:root[data-theme="dark"] .project-badge-dark {
+  display: block !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .project-badge-light {
+    display: none !important;
+  }
+
+  :root:not([data-theme="light"]) .project-badge-dark {
+    display: block !important;
+  }
+}

@@ -73,3 +73,44 @@
 .project-badge-dark[src*="streamdeck-docker"] {
   content: url("https://shieldcn.dev/group/github/stars/Darkdragon14/streamdeck-docker+github/release/Darkdragon14/streamdeck-docker.svg?size=sm&variant=principal&mode=dark&height=24&fontSize=13&labelColor=1e293b&color=0f172a&labelTextColor=e5eefb&valueColor=e5eefb&logoColor=67e8f9");
 }
+
+.links {
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.05rem;
+  padding: 0.38rem 0.72rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--subtle-chip-bg);
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1;
+  transition: color 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--accent);
+  border-color: rgba(34, 211, 238, 0.42);
+  background: var(--subtle-button-bg);
+}
+
+@media (max-width: 520px) {
+  .links {
+    gap: 0.45rem;
+  }
+
+  .links a {
+    min-height: 2rem;
+    padding: 0.36rem 0.66rem;
+    font-size: 0.9rem;
+  }
+}

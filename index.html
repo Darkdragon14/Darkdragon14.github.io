@@ -44,11 +44,10 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Home Assistant · Docker · Self-hosting</p>
-        <h1>Building tools that make smart homes and homelabs less annoying to maintain.</h1>
+        <h1>Smart homes.<br>Calmer homelabs.</h1>
         <p class="hero-text">
-          I build open-source tools for Home Assistant, Docker, Cloudflare Tunnels,
-          and self-hosted infrastructures. If something can be automated instead of
-          managed by hand, I’ll probably try to automate it.
+          Open-source tools for Home Assistant, Docker, and self-hosting.
+          Less manual work, more control — and fewer things to babysit.
         </p>
 
         <div class="hero-actions">
@@ -59,19 +58,15 @@
       </div>
 
       <aside class="hero-panel" aria-label="Quick profile">
-        <div class="terminal">
-          <div class="terminal-bar"><span></span><span></span><span></span></div>
-          <pre><code>$ whoami
-Darkdragon14
-
-$ focus
-Home Assistant integrations
-Docker tooling
-Cloudflare Tunnel automation
-Self-hosted infrastructure
-
-$ motto
-Automation > manual steps</code></pre>
+        <div class="profile-card">
+          <div class="profile-heading">
+            <img class="profile-avatar" src="https://avatars.githubusercontent.com/u/19928423?v=4" alt="" width="80" height="80">
+            <div>
+              <h2>Darkdragon14</h2>
+              <p>The person behind the projects.</p>
+            </div>
+          </div>
+          <p class="profile-description">I build tools for the repetitive parts: backing up data, sharing guest access, and keeping infrastructure in sync.</p>
         </div>
       </aside>
     </section>
@@ -84,12 +79,12 @@ Automation > manual steps</code></pre>
       </div>
 
       <div class="project-grid">
-        <article class="project-card featured">
-          <div class="project-icon">📦</div>
+        <article id="volumevault" class="project-card featured">
           <div>
             <div class="project-topline">
+              <span class="project-icon" aria-hidden="true">📦</span>
               <h3>VolumeVault</h3>
-              <span class="badge">New</span>
+              <span class="badge">Featured</span>
             </div>
             <div class="project-meta" aria-label="VolumeVault GitHub metadata">
               <a class="project-badge-link" href="https://github.com/Darkdragon14/VolumeVault" target="_blank" rel="noopener noreferrer" aria-label="VolumeVault GitHub stars and latest release">
@@ -98,25 +93,28 @@ Automation > manual steps</code></pre>
               </a>
             </div>
             <p>
-              A friendly backup manager for Docker volumes. Create, schedule, pause,
-              monitor, and restore Docker volume backups without writing cron jobs or
-              remembering backup commands.
+              Back up Docker volumes and host directories from one self-hosted dashboard.
+              Schedule jobs, keep an eye on your backups, and restore when it matters.
             </p>
             <ul>
-              <li>Docker volume backups made visible</li>
-              <li>Multiple storage backends, from local targets to remote object storage</li>
-              <li>Guided scheduling instead of raw cron</li>
-              <li>Pause backups when a volume disappears</li>
-              <li>Restore support for when backups actually matter</li>
+              <li>Grouped backups and stack-level volume coverage</li>
+              <li>Local and remote storage destinations, with retention controls</li>
+              <li>Run history, notifications, and proactive alerts</li>
             </ul>
             <div class="links">
               <a href="https://github.com/Darkdragon14/VolumeVault">GitHub</a>
-              <a href="https://darkdragon14.github.io/VolumeVault/">Docs</a>
+              <a href="https://volumevault.darkdragon14.dev/">Docs</a>
             </div>
           </div>
+          <figure class="project-preview">
+            <a href="https://volumevault.darkdragon14.dev/" aria-label="Explore VolumeVault documentation">
+              <img src="https://raw.githubusercontent.com/Darkdragon14/VolumeVault/v2.0.5/public/previews/dashboard.png" alt="VolumeVault dashboard showing backup activity and status" width="1242" height="1361" loading="lazy">
+            </a>
+            <figcaption>Your backups, without the guesswork.</figcaption>
+          </figure>
         </article>
 
-        <article class="project-card">
+        <article id="cloudflare-sync" class="project-card">
           <div class="project-icon">☁️</div>
           <h3>docker-cloudflare-tunnel-sync</h3>
           <div class="project-meta" aria-label="docker-cloudflare-tunnel-sync GitHub metadata">
@@ -125,8 +123,8 @@ Automation > manual steps</code></pre>
               <img class="project-badge-dark" src="https://shieldcn.dev/group/github/stars/Darkdragon14/docker-cloudflare-tunnel-sync+github/release/Darkdragon14/docker-cloudflare-tunnel-sync.svg?size=sm&variant=secondary" alt="docker-cloudflare-tunnel-sync GitHub stars and latest release">
             </a>
           </div>
-          <p>Turn Docker labels into Cloudflare Tunnel routes, DNS records, and Access rules.</p>
-          <p class="mini">Containers become the source of truth — no more dashboard clicking.</p>
+          <p>Keep Cloudflare Tunnel routes, DNS records, and optional Access policies in sync with your Docker labels.</p>
+          <p class="mini">Multiple routes per container, with a dry-run mode to preview changes before applying them.</p>
           <div class="links">
             <a href="https://github.com/Darkdragon14/docker-cloudflare-tunnel-sync">GitHub</a>
             <a href="https://darkdragon14.github.io/docker-cloudflare-tunnel-sync/">Docs</a>
@@ -142,8 +140,8 @@ Automation > manual steps</code></pre>
               <img class="project-badge-dark" src="https://shieldcn.dev/group/github/stars/Darkdragon14/ha-aqara-devices+github/release/Darkdragon14/ha-aqara-devices.svg?size=sm&variant=secondary" alt="ha-aqara-devices GitHub stars and latest release">
             </a>
           </div>
-          <p>Advanced Aqara Cloud integration for Home Assistant, powered by a RocketMQ bridge for near real-time device events.</p>
-          <p class="mini">Install the integration with HACS, then run the bridge as Docker service or Home Assistant OS add-on.</p>
+          <p>Bring supported Aqara cameras, doorbells, hubs, presence sensors, and locks into Home Assistant with live cloud updates.</p>
+          <p class="mini">Includes hub child-device sensors and optional camera streaming through go2rtc. Requires an Aqara developer project and the companion bridge.</p>
           <div class="links">
             <a href="https://darkdragon14.github.io/aqara-rocketmq-bridge/">Docs</a>
             <a href="https://github.com/Darkdragon14/ha-aqara-devices">Integration</a>
@@ -162,15 +160,15 @@ Automation > manual steps</code></pre>
               <img class="project-badge-dark" src="https://shieldcn.dev/group/github/stars/Darkdragon14/ha-access-control-manager+github/release/Darkdragon14/ha-access-control-manager.svg?size=sm&variant=secondary" alt="ha-access-control-manager GitHub stars and latest release">
             </a>
           </div>
-          <p>Centralized role and permission management for Home Assistant dashboards, entities, helpers, and devices.</p>
-          <p class="mini">Clean dashboards, proper access levels, fewer “who broke this?” moments.</p>
+          <p>Manage Home Assistant user groups and their permissions from one dedicated interface.</p>
+          <p class="mini">Configure entity access and dashboard visibility, with label-based bulk editing for existing devices and entities.</p>
           <div class="links">
             <a href="https://github.com/Darkdragon14/ha-access-control-manager">GitHub</a>
             <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Darkdragon14&repository=ha-access-control-manager">HACS</a>
           </div>
         </article>
 
-        <article class="project-card">
+        <article id="guest-mode" class="project-card">
           <div class="project-icon">🏠</div>
           <h3>ha-guest-mode</h3>
           <div class="project-meta" aria-label="ha-guest-mode GitHub metadata">
@@ -179,8 +177,8 @@ Automation > manual steps</code></pre>
               <img class="project-badge-dark" src="https://shieldcn.dev/group/github/stars/Darkdragon14/ha-guest-mode+github/release/Darkdragon14/ha-guest-mode.svg?size=sm&variant=secondary" alt="ha-guest-mode GitHub stars and latest release">
             </a>
           </div>
-          <p>Generate secure, time-limited guest links for Home Assistant.</p>
-          <p class="mini">Guests get access, you keep control, no zombie accounts.</p>
+          <p>Create and manage Home Assistant guest login links with optional time windows and usage limits.</p>
+          <p class="mini">Share QR codes, choose a landing dashboard, or control recurring access with a schedule or input boolean. Uses an existing Home Assistant user.</p>
           <div class="links">
             <a href="https://github.com/Darkdragon14/ha-guest-mode">GitHub</a>
             <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Darkdragon14&repository=ha-guest-mode">HACS</a>
@@ -196,8 +194,8 @@ Automation > manual steps</code></pre>
               <img class="project-badge-dark" src="https://shieldcn.dev/group/github/stars/Darkdragon14/streamdeck-docker+github/release/Darkdragon14/streamdeck-docker.svg?size=sm&variant=secondary" alt="streamdeck-docker GitHub stars and latest release">
             </a>
           </div>
-          <p>Control Docker and Compose stacks from an Elgato Stream Deck.</p>
-          <p class="mini">One button, one container. Surprisingly addictive.</p>
+          <p>Start, stop, and monitor Docker containers and Compose stacks from your Elgato Stream Deck.</p>
+          <p class="mini">Choose a Docker context per key, or browse and toggle stacks with a Stream Deck + dial.</p>
           <div class="links">
             <a href="https://github.com/Darkdragon14/streamdeck-docker">GitHub</a>
             <a href="https://marketplace.elgato.com/product/elgato-docker-b4403038-98e1-4f4b-a336-cdb0cb84019a">Marketplace</a>
